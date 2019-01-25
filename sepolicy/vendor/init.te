@@ -1,0 +1,2 @@
+# Allow init create cgroups
+allow init cgroup:file create;
