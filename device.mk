@@ -219,6 +219,15 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
+	
+# Hostapd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/wifi/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
+
+PRODUCT_PACKAGES += \
+    move_wifi_data.sh
 
 # IFAA manager
 PRODUCT_PACKAGES += \
