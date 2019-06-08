@@ -128,9 +128,6 @@ config.disable_rtt=true
 persist.radio.atfwd.start=false
 ro.kernel.qemu.gles=0
 
-#Enable ZRAM
-ro.vendor.qti.config.zram=true
-
 #Property to enable perf boosts from System Server
 vendor.perf.gestureflingboost.enable=true
 
