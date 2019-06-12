@@ -367,6 +367,14 @@ on post-fs-data
     #Create directory for FOTA
     mkdir /data/fota 0771
     chown system system /data/fota
+	
+    # SSC/SLPI sensors
+    mkdir /persist/sensors 0775 sensors sensors
+    write /persist/sensors/sensors_settings 1
+    chown system root /persist/sensors/sensors_settings
+    chmod 0664 /persist/sensors/sensors_settings
+    chown system system /persist/PRSensorData.txt
+    chmod 0600 /persist/PRSensorData.txt
 
     # Create /data/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
@@ -646,17 +654,17 @@ service vendor.dataadpl /system/vendor/bin/adpl
     group radio oem_2901 diag usb net_admin
     disabled
 
-service vendor.sensors /vendor/bin/sscrpcd
+service vendor.sensors /vendor/bin/sensors.qti
     class core
-    user system
-    group system
-    disabled
+    user root
+    group root
+	writepid /dev/cpuset/system-background/tasks
 
-service vendor.sensors.qti /vendor/bin/sensors.qti
+service vendor.sensors2 /vendor/bin/sensors.qcom
     class core
-    user system
-    group system
-    disabled
+    user root
+    group root
+	writepid /dev/cpuset/system-background/tasks
 
 on property:ro.vendor.use_data_netmgrd=false
     # netmgr not supported on specific target
@@ -912,41 +920,12 @@ service qcom-sh /vendor/bin/init.qcom.sh
     group root system radio
     oneshot
 
-service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
-    class core
-    user root
-    oneshot
-
-service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-    class late_start
-    user root
-    oneshot
-
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
     disabled
     oneshot
-
-service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-    seclabel u:r:qti-testscripts:s0
-
-service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
-service wifi-crda /vendor/bin/init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
 
 on property:sys.boot_completed=1
     start qcom-post-boot
