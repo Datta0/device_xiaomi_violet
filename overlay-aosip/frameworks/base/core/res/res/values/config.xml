@@ -26,4 +26,5 @@
 
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+    <bool name="config_multiColorBatteryLed">false</bool>
 </resources>
