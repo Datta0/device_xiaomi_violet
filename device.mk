@@ -158,6 +158,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     libqdutils \
     libdrm.vendor \
+    libdisplayconfig \
     libqdMetaData.system \
     libtinyxml \
     libvulkan \
