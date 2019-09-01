@@ -14,7 +14,8 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common PixelExperience stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/revengeos/config/gsm.mk)
 
 # Gapps
 $(call inherit-product-if-exists, vendor/gapps/config.mk)
@@ -25,7 +26,7 @@ IS_PHONE := true
 $(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosip_violet
+PRODUCT_NAME := revengeos_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
