@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosip_violet.mk
+    $(LOCAL_DIR)/syberia_violet.mk
