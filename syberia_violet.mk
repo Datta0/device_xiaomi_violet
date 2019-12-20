@@ -15,6 +15,8 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common Syberia stuff.
 $(call inherit-product, vendor/syberia/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_WIFI_EXT := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := syberia_violet
