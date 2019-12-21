@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 ifneq ($(TARGET_TAP_TO_WAKE_NODE),)
     LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
 endif
-
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_MODULE := android.hardware.power@1.2-service.violet
 LOCAL_INIT_RC := android.hardware.power@1.2-service.violet.rc
 LOCAL_MODULE_RELATIVE_PATH := hw
