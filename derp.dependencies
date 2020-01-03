@@ -13,4 +13,10 @@
     "repository": "vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet"
   }
+  {
+    "repository": "packages_apps_GoogleCamera_violet",
+    "target_path": "packages/apps/GoogleCamera",
+    "branch": "ten",
+    "remote": "pixel-gitlab"
+  }
 ]
