@@ -16,8 +16,16 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common AOSiP stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
+#Official
+DERP_BUILDTYPE := Official
+
+#Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+IS_PHONE:=true
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosip_violet
+PRODUCT_NAME := derp_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro

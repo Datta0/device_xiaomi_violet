@@ -1,6 +1,7 @@
 [
   {
-    "repository": "android_kernel_xiaomi_sm6150",
+    "remote": "PixelExperience-Devices"
+    "repository": "kernel_xiaomi_sm6150",
     "target_path": "kernel/xiaomi/sm6150"
   },
   {
@@ -9,7 +10,7 @@
     "branch": "lineage-16.0"  
   },
   {
-    "repository": "android_vendor_xiaomi_violet",
+    "repository": "vendor_xiaomi_violet",
     "target_path": "vendor/xiaomi/violet"
   }
 ]
