@@ -22,7 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosip
 
-PRODUCT_ENFORCE_RRO_TARGETS := *
+#PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # NotchBar Killer
 PRODUCT_PACKAGES += \
