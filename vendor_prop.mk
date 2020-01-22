@@ -71,26 +71,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
-    debug.sf.enable_hwc_vds=1 \
-    debug.egl.hw=0 \
-    debug.sf.hw=0 \
-    debug.sf.latch_unsignaled=0 \
-    persist.hwc.mdpcomp.enable=true \
-    dev.pm.dyn_samplingrate=1 \
-    persist.demo.hdmirotationlock=false \
-    ro.opengles.version=196610 \
-    ro.sf.lcd_density=480 \
-    persist.debug.wfd.enable=1 \
-    sdm.debug.disable_skip_validate=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
-    persist.camera.preview.ubwc=0 \
-    persist.camera.video.ubwc=0 \
-    persist.hwc.enable_vds=1 \
-    debug.sf.recomputecrop=0 \
-    debug.enable.sglscale=1 \
-    vendor.display.enable_default_color_mode=1 \
-    vendor.gralloc.enable_fb_ubwc=1 \
-    vendor.display.disable_skip_validate=1
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -147,7 +127,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
-
-# UI
-PRODUCT_PROPERTY_OVERRIDES += \
-sys.use_fifo_ui=0
